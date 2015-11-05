@@ -1,0 +1,39 @@
+<div class="col-md-12">
+  <div class="well text-center">
+    <h1>{{title}}</h1>
+  </div>
+</div>
+
+<div class="col-md-offset-1 col-md-4 col-md-offset-1">
+  <select class="form-control">
+    <option *ng-for="#drive of drives">
+      {{ drive }}
+    </option>
+  </select>
+  <h2>{{myLeftLocation}}</h2>
+  <table class="table table-condensed">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Type</th>
+    </tr>
+    <tr *ng-for="#loc of leftLocations"><td>{{loc.name}}</td><td>{{loc.size}}</td><td>{{loc.type}}</td></tr>
+  </table>
+</div>
+
+<div class="col-md-offset-1 col-md-4 col-md-offset-1">
+  <select class="form-control">
+    <option *ng-for="#drive of drives">
+      {{ drive }}
+    </option>
+  </select>
+  <h2>{{myRightLocation}}</h2>
+  <table class="table table-condensed">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Type</th>
+    </tr>
+    <tr *ng-for="#loc of rightLocations"><td>{{loc.name}}</td><td>{{loc.size}}</td><td>{{loc.type}}</td></tr>
+  </table>
+</div>
